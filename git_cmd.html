@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: #1e1e1e;
+    color: #cccccc;
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+    font-size: 14px;
+    margin: 20px;
+    padding: 0;
+  }
+  .window {
+    background-color: #0c0c0c;
+    border: 1px solid #434343;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .titlebar {
+    background-color: #202020;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #2b2b2b;
+  }
+  .buttons {
+    display: flex;
+    gap: 8px;
+    margin-right: 15px;
+  }
+  .button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .close { background-color: #ff5f56; }
+  .minimize { background-color: #ffbd2e; }
+  .maximize { background-color: #27c93f; }
+  .title {
+    color: #8c8c8c;
+    font-size: 12px;
+  }
+  .content {
+    padding: 15px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }
+  .command {
+    color: #ffffff;
+  }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="titlebar">
+    <div class="buttons">
+      <div class="button close"></div>
+      <div class="button minimize"></div>
+      <div class="button maximize"></div>
+    </div>
+    <div class="title">Command Prompt - git branch / commit / push</div>
+  </div>
+  <div class="content">Microsoft Windows [Version 10.0.22631.3880]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Asus\JavaCalculator-CICD_Shashwath&gt;<span class="command">git checkout -b security-demo</span>
+Switched to a new branch 'security-demo'
+
+C:\Users\Asus\JavaCalculator-CICD_Shashwath&gt;<span class="command">git branch</span>
+  main
+* <span class="command">security-demo</span>
+
+C:\Users\Asus\JavaCalculator-CICD_Shashwath&gt;<span class="command">git status</span>
+On branch security-demo
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
+	<span style="color: #ff5f56;">modified:   .github/workflows/gradle.yml</span>
+	<span style="color: #ff5f56;">modified:   app/src/main/java/calculator/Calculator.java</span>
+	<span style="color: #ff5f56;">modified:   app/src/test/java/calculator/CalculatorTest.java</span>
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+	<span style="color: #ff5f56;">build.gradle</span>
+
+C:\Users\Asus\JavaCalculator-CICD_Shashwath&gt;<span class="command">git add .</span>
+
+C:\Users\Asus\JavaCalculator-CICD_Shashwath&gt;<span class="command">git commit -m "demo: introduce controlled security issue"</span>
+[security-demo e0fc2d1] demo: introduce controlled security issue
+ 4 files changed, 59 insertions(+), 2 deletions(-)
+ create mode 100644 build.gradle
+
+C:\Users\Asus\JavaCalculator-CICD_Shashwath&gt;<span class="command">git push -u origin security-demo</span>
+remote: Create a pull request for 'security-demo' on GitHub by visiting:
+remote:      https://github.com/shashwathsingh17043/JavaCalculator-CICD/pull/new/security-demo
+To https://github.com/shashwathsingh17043/JavaCalculator-CICD.git
+ * [new branch]      security-demo -&gt; security-demo
+Branch 'security-demo' set up to track remote branch 'security-demo' from 'origin'.</div>
+</div>
+</body>
+</html>
