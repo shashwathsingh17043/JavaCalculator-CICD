@@ -33,4 +33,12 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
         calc.divide(10.0, 0.0);
     }
+
+    @Test
+    public void testWeakHash() {
+        Calculator calc = new Calculator();
+        assertNotNull(calc.weakHash("test data"));
+        assertEquals(16, calc.weakHash("test data").length);
+    }
 }
+
